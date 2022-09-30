@@ -19,7 +19,7 @@ public class PersonDto {
     @JsonProperty
     private String names;
     @JsonProperty
-    private String userType;
+    private UserType userType;
     @JsonProperty
     private PersonStatus status;
 

@@ -11,6 +11,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Getter
 @Setter
+@Entity(name = "loans")
+@Table
 public class Loan {
 
     @Id

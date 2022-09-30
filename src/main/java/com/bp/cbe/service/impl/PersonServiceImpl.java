@@ -19,11 +19,6 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public PersonDto createPerson(PersonDto personDto) {
-        try {
-            UserType.valueOf(personDto.getUserType());
-        } catch (IllegalArgumentException exception) {
-            throw new UserTypeDoesNotExistException();
-        }
         Person person = mapper.dtoToPerson(personDto);
         personRepository.save(person);
         return mapper.personToDto(person);

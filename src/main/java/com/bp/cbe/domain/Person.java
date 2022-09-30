@@ -11,6 +11,8 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Getter
 @Setter
+@Entity(name = "persons")
+@Table
 public class Person {
 
     @Id
