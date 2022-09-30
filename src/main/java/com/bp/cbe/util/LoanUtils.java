@@ -2,6 +2,7 @@ package com.bp.cbe.util;
 
 import com.bp.cbe.domain.Loan;
 import com.bp.cbe.domain.enums.UserType;
+import com.bp.cbe.util.constants.DaysToAdd;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
@@ -13,13 +14,13 @@ public class LoanUtils {
         LocalDate returnDate = LocalDate.now();
         switch (userType){
             case INVITED:
-                returnDate = addDaysSkippingWeekends(returnDate, 30);
+                returnDate = addDaysSkippingWeekends(returnDate, DaysToAdd.INVITED_DAYS);
                 break;
             case INTERN:
-                returnDate = returnDate.plusDays(365);
+                returnDate = returnDate.plusDays(DaysToAdd.INTERN_DAYS);
                 break;
             case EXTERN:
-                returnDate = returnDate.plusDays(360);
+                returnDate = returnDate.plusDays(DaysToAdd.EXTERN_DAYS);
                 break;
         }
 

@@ -10,4 +10,6 @@ public class CbePracticalAssesmentJava2022Q3Application {
 		SpringApplication.run(CbePracticalAssesmentJava2022Q3Application.class, args);
 	}
 
+
+
 }
